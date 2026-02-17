@@ -1,0 +1,7 @@
+BUBBLE HEAD	Hey! You missed the dance floor!<br>I made this place with all my heart and soul!
+HANDLER	What is this place.
+BUBBLE HEAD	I already told you. New product testing lab.
+BUBBLE HEAD	The old here's atmosphere was so dull, so I just decorated it
+HANDLER	So this crazy 80s club style is your cup of tea?
+BUBBLE?HEAD	Do you got a problem with 80s, guy in the chair?
+HANDLER	Asshole.....

@@ -1,0 +1,7 @@
+HANDLER	Once this mission is resolved, it could directly cut off illegal weapons,<br> indirectly discourage terrorist groups
+HANDLER	But more than that, I'm worried about its influence in the city.
+HANDLER	People can buy powerful weapons all too easily,
+HANDLER	The market is selling military steam packs for civilian use,<br>saying they are stimulants.
+HANDLER	After we take down the FACTORY, it will take a long time to erase the traces.
+HANDLER	However, in the end, it's a later matter.
+HANDLER	For now, I'll have to focus on my work.

@@ -1,0 +1,4 @@
+tmp_1	this is a tmp file.
+tmp_2	line break test.<br> 1234567890
+tmp_3	test 3. color test. <br> <color=red> RED TEXT </color><color=blue> BLUE TEXT </color>
+tmp_3	 this is a last page.

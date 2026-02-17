@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c14363021b1156f4cadca93edd083330, type: 3}
+  m_Name: ChatDisplayDataDefault
+  m_EditorClassIdentifier: 
+  portriats:
+    m_keys:
+    - "\uD578\uB4E4\uB7EC"
+    - "\uCE58\uD504"
+    - "\uC5D8\uB808\uC5B4"
+    - "\uBC84\uBE14 \uD5E4\uB4DC"
+    - "\uBC84\uBE14?\uD5E4\uB4DC"
+    - "\uBD88\uCE78"
+    - "\uAC11\uC637 \uC785\uC740 \uC778\uBD80"
+    - "\uC778\uBD80 1"
+    - "\uC778\uBD80 2"
+    - "\uAE30\uB3D9\uB300"
+    m_values:
+    - {fileID: 21300000, guid: 23f552ea3efd8044bbae862763f981b4, type: 3}
+    - {fileID: 21300000, guid: ec436b870a11f444abc704a73765ba42, type: 3}
+    - {fileID: 21300014, guid: a1fbd1aaf76d0b94e88551b7c406ee2c, type: 3}
+    - {fileID: 21300000, guid: 46cfb96c9a935a54a99e73f96552a940, type: 3}
+    - {fileID: 21300000, guid: 7ea1241622cb2a14ab52c249bc58e62d, type: 3}
+    - {fileID: 21300014, guid: a1fbd1aaf76d0b94e88551b7c406ee2c, type: 3}
+    - {fileID: 21300000, guid: 1705af65bfd2ce6458544caed61b94e1, type: 3}
+    - {fileID: 21300000, guid: 19eb52d9b0625794f9c50a5395e1a5fd, type: 3}
+    - {fileID: 21300000, guid: da3e10aa280009e41ad84685e6b1add5, type: 3}
+    - {fileID: 21300000, guid: 59c3e69a67066d541af5ce91e8f93fd5, type: 3}

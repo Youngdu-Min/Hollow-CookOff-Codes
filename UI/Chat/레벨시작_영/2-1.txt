@@ -1,0 +1,4 @@
+HANDLER	We have reached the roof of the FACTORY.
+HANDLER	It's safer to infiltrate the rooftop<br>than break through all kinds of security  and monsters.
+HANDLER	But... be careful where you stand.
+HANDLER	If you come this far and fall, nothing would be more ridiculous than that.

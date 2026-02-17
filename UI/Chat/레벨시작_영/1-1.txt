@@ -1,0 +1,5 @@
+HANDLER	This is 'FACTORY'
+HANDLER	It seems to be an old factory, but it just smoke screen.
+HANDLER	HOLLOW, your mission is eliminating related people, witnesses<br>and ceasing the FACTORY
+HANDLER	Also, you have to secure 'VULCAN'. The owner of FACTORY.
+HANDLER	Make haste, but don't leave anyone behind.

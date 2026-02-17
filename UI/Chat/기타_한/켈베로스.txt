@@ -1,0 +1,6 @@
+HANDLER	이건.....!
+HANDLER	거대 병기...?!
+HANDLER	개의 형상을 한건가?
+VULCAN	정확한 상품명은 'KE11-B3L0S'라네.
+HANDLER	당신은!
+HANDLER	잠깐, 기계가! 움직이기 시작합니다, 할로우!

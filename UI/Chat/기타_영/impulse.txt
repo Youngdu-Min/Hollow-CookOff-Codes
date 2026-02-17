@@ -1,0 +1,7 @@
+BUBBLE HEAD	Let me introduce you!
+BUBBLE HEAD	Our FACTORY's newest product! Quality guaranteed! No aftersales service!
+HANDLER 	Modified human...?
+BUBBLE?HEAD	I kept him in the warehouse because<br>he couldn't control it as much as I thought
+BUBBLE HEAD	But thanks to you, he's able to come out to the world and play his part
+BUBBLE HEAD	Isn't that a relief?
+HANDLER	Maniac...!

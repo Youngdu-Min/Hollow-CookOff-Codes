@@ -1,0 +1,8 @@
+HANDLER	According to the blueprint we secured,<br>there will be an elevator that can reach the center of the FACTORY soon.
+HANDLER	The target, VULCAN, is probably hiding most deep in the FACTORY.
+HANDLER	Note that VULCAN's personal information has never been exposed so far.
+HANDLER	Even the government's intelligence cannot figure out him.<br>even VULCAN's face.
+HANDLER	When the business needed, he sends a woman named ELEAOR as his agent.
+HANDLER	The only information we have is that it's an elderly man.
+HANDLER	Fortunately, I don't think we'll see old men here often.
+HANDLER	If you see an old man, please remove the finger from the trigger.

@@ -1,0 +1,6 @@
+HANDLER	Looks like an ordinary workers,<br>but they're strength and endurance are abnormal
+HANDLER	I'm sure it's a human procedure.
+HANDLER	As the government investigated,<br>this FACTORY does not seem to be an ordinary FACTORY.
+HANDLER	Moreover, Accused of manufacturing illegal weapons and<br>selling them to terrorists...
+HANDLER	HOLLOW, If we fail this mission,<br>the safety of the citizens living in the city will be threatened.
+HANDLER	Don't make any mistake.

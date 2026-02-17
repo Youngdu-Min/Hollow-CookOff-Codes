@@ -1,0 +1,7 @@
+STRIKE TEAM	HANDLER, just contacted Hollow SIGMA
+HANDLER	Aim for recovery, but kill if he resist.
+HANDLER	The target has lost control
+VULCAN	overheated guns are fired without pulling the trigger....
+STRIKE TEAM	Don't move a muscle, you monster!
+VULCAN	...a misfired bullet will be directed at its owner.
+STRIKE TEAM	What are you...!

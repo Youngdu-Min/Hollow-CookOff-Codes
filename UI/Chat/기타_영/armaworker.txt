@@ -1,0 +1,7 @@
+HANDLER	That is...?
+ARMORED WORKER	You shall not pass!
+ARMORED WORKER	I AM BULLETPROOF!
+HANDLER 	Is it armor made by welded scrap metal?
+HANDLER 	It's crude, but it's definitely going to stop the bullet.
+HANDLER 	But the back of the armor ...<br>The protruding part appears to be the joint.
+HANDLER 	Try attacking that side with a knife.<br>Such unstable defensive gear is bound to break even if it hits the connected part a little.

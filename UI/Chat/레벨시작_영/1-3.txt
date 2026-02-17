@@ -1,0 +1,7 @@
+HANDLER	If you think there is a lack of support, I will apologize instead.
+HANDLER	The government's raid on the FACTORY is a black-ops.
+HANDLER	If the mission goes wrong, the government will deny your existence.
+HANDLER	Except for the sabotage team, it's just you, the best of the best among us.
+HANDLER	Supplied rifle and knife are also FACTORY-made weapons.<br>For prevent being tracked
+HANDLER	However, the importance of this mission is great enough to say it twice.
+HANDLER	I will do my best to support you, too. Cause that's my job.
