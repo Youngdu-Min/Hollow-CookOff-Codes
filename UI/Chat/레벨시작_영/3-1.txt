@@ -1,8 +1,0 @@
-HANDLER	What the...?
-HANDLER	I don't get it. I'm sure this is underground of the FACTORY but...
-BUBBLE HEAD	It's exactly our FACTORY's proud new product testing laboratory!
-HANDLER	What the fuck?
-HANDLER	How did you get into this radio?
-BUBBLE?HEAD	Are you serious? I've been listening to everything<br>you've been talking about since you came into the FACTORY?
-BUBBLE HEAD	Well, one of you is a little bit mute.
-HANDLER	......

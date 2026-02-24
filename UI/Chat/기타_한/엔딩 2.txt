@@ -1,7 +1,0 @@
-STRIKE TEAM	핸들러, 할로우 시그마와 접촉하였습니다.
-HANDLER	회수를 목표로 하되, 저항하면 사살해라.
-HANDLER	목표는 통제력을 상실했다.
-VULCAN	결국 과열된 총은 방아쇠를 당기지 않아도...
-STRIKE TEAM	손가락 하나 움직이지 마라, 괴물 새끼야!
-VULCAN	...총알이 주인을 향할지.
-STRIKE TEAM	너 지금 뭘하는...!

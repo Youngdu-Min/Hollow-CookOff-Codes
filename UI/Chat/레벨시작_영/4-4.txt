@@ -1,4 +1,0 @@
-HANDLER	The manufacturing facility is now coming to an end.
-HANDLER	Now that we've come this far, this is everything of the FACTORY.
-HANDLER	Then, all that's left is VULCAN.
-HANDLER	Make haste, HOLLOW.

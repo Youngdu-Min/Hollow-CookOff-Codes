@@ -1,8 +1,0 @@
-HANDLER	이건 뭐...?
-HANDLER	뭐지? 분명 여기는 공장 지하....
-BUBBLE HEAD	정확히는 우리 공장의 자랑스러운 신제품 테스트실이지!
-HANDLER	뭐야 씨발?
-HANDLER	이 무전에는 어떻게 들어온거지?
-BUBBLE?HEAD	진심이야? 공장 들어올 때부터 너희가 떠드는 거 다 듣고 있었거든?
-BUBBLE HEAD	뭐 떠드는 건 한 명뿐이긴 하더라
-HANDLER	......

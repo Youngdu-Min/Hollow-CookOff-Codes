@@ -1,2 +1,0 @@
-HANDLER	Nicely done. The elevator mentioned earlier is right in front of you.
-HANDLER	I don't usually say this, but it's a smooth mission so far.

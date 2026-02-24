@@ -1,4 +1,0 @@
-HANDLER	Did you stabed a B.E knife into your body and caused an energy explosion?
-HANDLER	what a insanity...
-HANDLER	You escaped dangerous situation but, that was extremely dangerous action.
-HANDLER	Don't do it again.

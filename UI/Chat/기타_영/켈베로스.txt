@@ -1,6 +1,0 @@
-HANDLER	It's.....!
-HANDLER	A giant weapon...?!
-HANDLER	does it designed like a dog?
-VULCAN	The exact product name is 'KE11-B3L0S'.
-HANDLER	You!
-HANDLER	Wait, the machine! It's starting to move, HOLLOW!

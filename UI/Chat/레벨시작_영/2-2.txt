@@ -1,5 +1,0 @@
-HANDLER	If what we're dealing with is a real worker,
-HANDLER	Do they normally work in such dangerous conditions?
-HANDLER	Well, as you may have noticed, I think you can use a crane to cross the pit.
-HANDLER	However, some cranes are a little... unstable.
-HANDLER	I think it's better to be careful.

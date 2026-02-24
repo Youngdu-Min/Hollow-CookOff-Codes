@@ -1,5 +1,0 @@
-HANDLER	What...?
-HANDLER	Does the FACTORY also produce vehicles?
-HANDLER	The glass in the driver's seat looks like bulletproof glass.<br>You can't pierce it with your weapons.
-HANDLER	But the doorway of the vehicle...<br>It looks like the upper part of the driver's seat is not equipped with bulletproof glass.
-HANDLER	Shoot above the driver's seat.<br>The vehicle is too strong, so you have to aim for the driver.

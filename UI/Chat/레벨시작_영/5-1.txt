@@ -1,9 +1,0 @@
-HANDLER	I can't believe you broke a monster like that. That was great, HOLLOW.
-HANDLER	But the person who just got in on the radio...
-VULCAN	I'm late in introducing you. I'm the owner of the FACTORY you're looking for.
-HANDLER	VULCAN....
-HANDLER	You have not been ordered to kill.
-HANDLER	If you don't resist anymore, you'll be able to survive here.
-VULCAN	Is that a conciliation?
-VULCAN	To make another weapons that you want?
-VULCAN	NO, no you can't. I just make what I want to make.

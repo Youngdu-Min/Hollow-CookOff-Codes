@@ -1,7 +1,0 @@
-HANDLER	At last.
-HANDLER	Jesus, Thank you for killing that stupid DJ, HOLLOW.
-HANDLER	After all, it's more convenient to have only you on the radio.
-HANDLER	Anyway, we have now reached the center of the FACTORY, the production area.
-HANDLER	It's like reaching the heart of VULCAN.
-HANDLER	Watch out for dangerous production facilities.
-HANDLER	It doesn't seem like they're working with safety regulations.

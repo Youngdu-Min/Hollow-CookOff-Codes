@@ -1,8 +1,0 @@
-HANDLER	Soon your stupid and shitty place is over.
-HANDLER	Just surrender. Or you'll be badly beaten.
-BUBBLE?HEAD	Eh, Your're going to kill me anyway.
-BUBBLE HEAD	You talk like it's you who's holding a gun.
-BUBBLE HEAD	Besides, I cannot let my father down.
-HANDLER	Father?
-BUBBLE HEAD	When I'm done with you guys,<br>I have to refurbish this place that my father gave me with trust.
-HANDLER	VULCAN has a son....?
