@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -30,7 +30,6 @@ public class PlayerHealthBar : MonoBehaviour
     private PlayerHealth health;//플레이어 체력
     private float lastHP;
     private List<Image> heartsList = new List<Image>();
-    //private List<Image> emptyHeartsList = new List<Image>();
 
     private GameObject filledHearts, emptyHearts;
 
@@ -122,7 +121,6 @@ public class PlayerHealthBar : MonoBehaviour
 
             Image emptyImg = emptyH.AddComponent<Image>();
             emptyImg.sprite = emptyHeartIcon;
-            //emptyHeartsList.Add(emptyImg);
 
             var heartRect = heart.GetComponent<RectTransform>();
             heartRect.sizeDelta = new Vector2(50, 50);

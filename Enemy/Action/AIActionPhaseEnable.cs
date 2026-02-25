@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using MoreMountains.Tools;
@@ -63,10 +63,8 @@ namespace MoreMountains.CorgiEngine
             randomIdx = Random.Range(0, phaseTypes.Length);
             for (int i = 0; i < phaseTypes[randomIdx].objects.Length; i++)
             {
-                print("활성화 " + phaseTypes[randomIdx].objects[i].name);
                 phaseTypes[randomIdx].objects[i].SetActive(true);
             }
-            //targetObj.SetActive(true);
         }
 
         public void CancelEnableTarget()
@@ -84,7 +82,6 @@ namespace MoreMountains.CorgiEngine
         public override void OnExitState()
         {
             base.OnExitState();
-            //targetObj.SetActive(false);
             CancelInvoke();
             isInvoked = false;
         }

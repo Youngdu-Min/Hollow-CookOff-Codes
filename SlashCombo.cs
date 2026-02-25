@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class SlashCombo : MonoBehaviour
@@ -24,7 +24,6 @@ public class SlashCombo : MonoBehaviour
             return;
         }
         instance = this;
-        //brightText = GetComponent<Text>();
     }
 
     // Start is called before the first frame update

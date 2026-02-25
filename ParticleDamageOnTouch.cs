@@ -1,4 +1,4 @@
-﻿using MoreMountains.CorgiEngine;
+using MoreMountains.CorgiEngine;
 using UnityEngine;
 
 public class ParticleDamageOnTouch : DamageOnTouch
@@ -14,7 +14,6 @@ public class ParticleDamageOnTouch : DamageOnTouch
     void OnParticleCollision(GameObject other)
     {
 
-        print($"충돌 particle {other}");
         Colliding(other.GetComponent<Collider2D>());
 
         particle.Stop();

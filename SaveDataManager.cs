@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 public class SaveDataManager : MonoBehaviour
@@ -209,7 +209,6 @@ public class SaveDataManager : MonoBehaviour
 
     public void StageClear(int stage)
     {
-        print($"점수: {ScoreManager.Instance.score.totalScore}");
 
         SaveHighscore(stage, currentDifficulty, ScoreManager.Instance.score.totalScore, ScoreManager.Instance.clearTime);
 
@@ -228,7 +227,6 @@ public class SaveDataManager : MonoBehaviour
         {
             case WeaponType.Rifle:
                 Instance.saveData.AR_Enable = enable;
-                print($"ar enable = {Instance.saveData.AR_Enable}");
                 break;
             case WeaponType.Shotgun:
                 Instance.saveData.SG_Enable = enable;

@@ -1,4 +1,4 @@
-﻿using MoreMountains.CorgiEngine;
+using MoreMountains.CorgiEngine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -67,7 +67,6 @@ public class OverHeatUI : MonoBehaviour
     {
         if (instance.ignoreHeat)
             return;
-        //Debug.Log("Weapon IDX " + index);
         instance.mainWpIndex = index;
         instance.lastTime[index] = Time.time;
 
@@ -137,7 +136,6 @@ public class OverHeatUI : MonoBehaviour
     {
         instance.subWeaponIndex = index;
         instance.updated = true;
-        //instance.subGauge.fillAmount = instance.sub.Percentage(index);
     }
 
     private void UpdateMainWeapon()
@@ -165,12 +163,10 @@ public class OverHeatUI : MonoBehaviour
     private void UpdateSubWeapon(int index)
     {
         float _gauge = sub.Percentage(index);
-        // subGauge.fillAmount = _gauge;
         if (_gauge == 1f)
         {
             instance.updated = false;
         }
-        // Debug.Log(instance.sub.Percentage(index));
         //미완성
     }
     private void Start()

@@ -1,4 +1,4 @@
-﻿using DG.Tweening;
+using DG.Tweening;
 using MoreMountains.Feedbacks;
 using System.Collections;
 using UnityEngine;
@@ -92,7 +92,6 @@ namespace MoreMountains.CorgiEngine
             {
                 StartCoroutine(GrappleOff());
                 gameObject.SetActive(false);
-                Debug.Log("subweapon 그래플 3 " + endOff);
             }
 
             grappleHead.transform.position = grapplePoint;
@@ -108,7 +107,6 @@ namespace MoreMountains.CorgiEngine
 
         public IEnumerator GrappleOff()
         {
-            print($"GrappleOff");
 
             m_rigidbody.gravityScale = 1;
             ControllerToggle(true);
@@ -150,7 +148,6 @@ namespace MoreMountains.CorgiEngine
             if (grappleHitFeedback?.IsPlaying == false)
                 grappleHitFeedback?.PlayFeedbacks();
 
-            Debug.Log(launchPos + "launchPos");
             if (!enemyGrab && (_controller.State.IsGrounded || (launchPos.x > 0 && (currDistance.x + deceleration) * -1 >= launchPos.x) || (launchPos.x < 0 && (currDistance.x + deceleration) * -1 <= launchPos.x) || health.CurrentHealth < startHealth))
             {
                 StartCoroutine(GrappleOff());
@@ -162,7 +159,6 @@ namespace MoreMountains.CorgiEngine
                 int direction = gunHolder.position.x > enemyTr.position.x ? 1 : -1;
                 enemyTr.DOMoveX(gunHolder.position.x, enemyPullTime).OnUpdate(() =>
                 {
-                    print($"enemyTr.position.x : {enemyTr.position.x}, gunHolder.position.x : {gunHolder.position.x} / {Mathf.Abs(enemyTr.position.x - gunHolder.position.x)}");
                     if (Mathf.Abs(enemyTr.position.x - gunHolder.position.x) < 1f)
                         StartCoroutine(GrappleOff());
                 });
@@ -185,7 +181,6 @@ namespace MoreMountains.CorgiEngine
             if (!_hit || !IsPointInsideCamera(_hit.point))
                 return;
 
-            print($"_hit.transform.gameObject.layer : {_hit.transform.gameObject} {_hit.transform.gameObject.layer}");
 
             grappleShootFeedback?.PlayFeedbacks();
 

@@ -1,4 +1,4 @@
-﻿using MoreMountains.CorgiEngine;
+using MoreMountains.CorgiEngine;
 using MoreMountains.Feedbacks;
 using System;
 using System.Collections.Generic;
@@ -69,10 +69,6 @@ public class WeaponSelectUI : MonoBehaviour
             Destroy(this.gameObject);
             return;
         }
-        else
-        {
-            // Initiate();
-        }
     }
 
     void Initiate()
@@ -97,7 +93,6 @@ public class WeaponSelectUI : MonoBehaviour
         grapple = player.GetComponentInChildren<GrapplingGun>(true);
         grapple.gameObject.SetActive(false);
 
-        //OverHeatUI.ChangeSubWeapon((int)SubWeapon.currentSubWp - 4);
     }
 
     // Update is called once per frame
@@ -196,7 +191,6 @@ public class WeaponSelectUI : MonoBehaviour
         {
             display.SetActive(true);
             RefreshBlockImage();
-            // mainWeapon.AbilityPermitted = false;
             mainWeapon.enabled = false;
             PauseManager.Instance().PauseCall(this, true);
             Select(selectedMainWp);
@@ -386,7 +380,6 @@ public class WeaponSelectUI : MonoBehaviour
         //아킴보일 경우 팔 하나 추가하는 코드
         if (player.TryGetComponent(out InsideArm inArm))
         {
-            // Debug.Log("아킴보 on");
             inArm.SetTarget(mainWeapon.CurrentWeapon.transform);
             inArm.SetSprite(i == 3);
 
@@ -470,7 +463,6 @@ public class WeaponSelectUI : MonoBehaviour
 
     public void Reset()
     {
-        //currentMainWeapon = -1;
         Select(0);
         Select(4);
     }

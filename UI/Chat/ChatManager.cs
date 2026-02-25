@@ -1,4 +1,4 @@
-﻿using MoreMountains.Feedbacks;
+using MoreMountains.Feedbacks;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -56,7 +56,6 @@ public class ChatManager : MonoBehaviour
 
     public void SetDialogue(string name)
     {
-        //Debug.Log(name);
         var textAsset = Instance.chatDB.FindDialogueByName(name);
 
         curDialogue.Clear();
@@ -99,7 +98,6 @@ public class ChatManager : MonoBehaviour
         index = 0;
 
         PauseManager.Instance().PauseCall(Instance, true);
-        //PauseManager.Instance().PauseGame();
         Instance.chatUI.SetActive(true);
 
         NextChat();
@@ -139,7 +137,6 @@ public class ChatManager : MonoBehaviour
         isTypeingEnd = false;
         textObj.text = ""; //기존 대화내용 초기화
 
-        //print("대화 시작");
         while (currentChar < charLength)
         {
             yield return new WaitForSecondsRealtime(timeForCharacter);

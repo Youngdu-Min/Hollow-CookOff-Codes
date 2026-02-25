@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,7 +18,6 @@ public class BackgroundController : MonoBehaviour
 
     [Tooltip("Moving Scale when the camera moves on")]
     public Vector2 bgScrollingSpeed = new Vector2(1,0);
-    //private Vector2 _movingSpeed;
 
     // Start is called before the first frame update
     void Start()

@@ -1,4 +1,4 @@
-﻿using MoreMountains.CorgiEngine;
+using MoreMountains.CorgiEngine;
 using MoreMountains.Tools;
 using System.Collections;
 using UnityEngine;
@@ -101,7 +101,6 @@ public class Bullet : MonoBehaviour
                     MMSimpleObjectPooler[] pooler = FindObjectsOfType<MMSimpleObjectPooler>(); // 오브젝트 풀러 찾아서
                     char sp = '-';
                     string[] spStr = this.gameObject.name.Split(sp); // 이 총알의 이름을 스폰하는지 비교('-' 이전 부분은 동일함)
-                    Debug.Log("split " + spStr[0]);
                     for (int i = 0; i < pooler.Length; i++)
                     {
                         if (pooler[i].GameObjectToPool.name.Equals(spStr[0])) // 오브젝트 풀러가 생성하는 오브젝트와 이 총알의 '-' 앞부분이 같다면
@@ -109,7 +108,6 @@ public class Bullet : MonoBehaviour
                             // 트리거 해피 상승량 - (이 옵젝 위치 - 풀러 무기의 주인(플레이어)의 위치로 계산한 값)으로 포스 적용
                             float y = transform.position.y - pooler[i].GetComponent<ProjectileWeapon>().Owner.transform.position.y;
                             _controller?.SetVerticalForce(GSManager.Ability.enemyTriggerHappy - y);
-                            Debug.Log("splitSp " + (GSManager.Ability.enemyTriggerHappy - y));
                         }
 
                     }

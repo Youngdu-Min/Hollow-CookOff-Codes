@@ -1,4 +1,4 @@
-﻿using MoreMountains.Tools;
+using MoreMountains.Tools;
 using UnityEngine;
 
 namespace MoreMountains.CorgiEngine
@@ -46,7 +46,6 @@ namespace MoreMountains.CorgiEngine
 
         public override void OnEnterState()
         {
-            Debug.Log("타깃 활성화 시작");
             base.OnEnterState();
             if (!waitAnimate)
                 animator?.SetBool(targetObj.name, true);
@@ -59,7 +58,6 @@ namespace MoreMountains.CorgiEngine
 
         private void EnableTarget()
         {
-            Debug.Log("타깃 활성화");
             targetObj.SetActive(true);
             if (waitAnimate)
                 animator?.SetBool(targetObj.name, true);

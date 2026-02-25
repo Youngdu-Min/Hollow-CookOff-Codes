@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace MoreMountains.CorgiEngine
@@ -95,7 +95,6 @@ namespace MoreMountains.CorgiEngine
                 {
                     page[savePage].spawnob[i].SetActive(true); // 다음페이지 적을 소환
                     page[savePage].spawnob[i].transform.position = page[savePage].initPos[i];
-                    //page[savePage].spawnob[i].transform.localScale = new Vector2(1 / page[savePage].spawnob[i].transform.parent.localScale.x, 1 / page[savePage].spawnob[i].transform.parent.localScale.y);
                 }
                 ableCount = page[savePage].spawnob.Length;
                 savePage++;
@@ -103,7 +102,6 @@ namespace MoreMountains.CorgiEngine
         }
         public void AbleSpawnReset() // 적 스폰초기화
         {
-            print($"{gameObject} AbleSpawnReset");
             if (clear == false) // 적을다 처리하기전에 플레이어가 죽었을때
             {
                 for (savePage--; savePage >= 0; savePage--)

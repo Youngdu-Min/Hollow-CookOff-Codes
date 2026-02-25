@@ -1,4 +1,4 @@
-﻿using MoreMountains.Feedbacks;
+using MoreMountains.Feedbacks;
 using MoreMountains.Tools;
 using System.Collections;
 using UnityEngine;
@@ -155,7 +155,6 @@ namespace MoreMountains.CorgiEngine
             {
                 btDownTime += Time.deltaTime;
                 AirBornePiUI.Instance().saveNum = btDownTime / HollowBalance.action.actionList[30].floatValue;
-                // Debug.Log(btDownTime);
             }
             else if (Input.GetButtonUp("Player1_SecondaryShoot"))
             {
@@ -187,7 +186,6 @@ namespace MoreMountains.CorgiEngine
                 _boxCollider2D.offset = AreaOffset;
                 _boxCollider2D.size = AreaSize;
                 _damageAreaCollider = _boxCollider2D;
-                //print($"나이프 사이즈 {AreaSize} {AreaOffset}");
             }
             if (DamageAreaShape == MeleeDamageAreaShapes.Circle)
             {
@@ -248,14 +246,12 @@ namespace MoreMountains.CorgiEngine
 
                 // we set its dashing state to true
                 _movement.ChangeState(CharacterStates.MovementStates.Meleeing);
-                Debug.Log("coolDown " + currCoolDown);
                 TriggerWeaponStartFeedback();
 
                 TriggerWeaponUsedFeedback();
                 _initialPosition = this.transform.position;
 
                 dir = characterHandleWeapon.CurrentWeapon.transform.right * knifeSpeed;
-                Debug.Log("weaponON, " + dir);
 
                 _applyForceWhileInUse = true;
                 _shouldKeepKnifing = true;
@@ -302,7 +298,6 @@ namespace MoreMountains.CorgiEngine
 
         public IEnumerator MeleeWeaponAttack()
         {
-            Debug.Log("Attack");
             if (_attackInProgress) { yield break; }
             horizontalMovement.enabled = true;
             _attackInProgress = true;
@@ -312,12 +307,10 @@ namespace MoreMountains.CorgiEngine
 
             if (btDownTime >= HollowBalance.action.actionList[30].floatValue)
             {
-                Debug.Log("Attack_Air");
                 _damageOnTouch.DamageCausedKnockbackForce = HollowBalance.action.actionList[29].vectorValue;
                 isCharge = true;
             }
 
-            Debug.Log($"나이프 넉백 {_damageOnTouch.DamageCausedKnockbackForce} / {HollowBalance.action.actionList[29].vectorValue}");
             yield return new WaitForSeconds(InitialDelay);
             EnableDamageArea();
             yield return MMCoroutine.WaitForFrames(1);
@@ -335,7 +328,6 @@ namespace MoreMountains.CorgiEngine
             _hitNonDamageableEventSent = false;
             _killEventSent = false;
             _damageAreaCollider.enabled = true;
-            Debug.Log("ON");
         }
 
         /// <summary>
@@ -355,7 +347,6 @@ namespace MoreMountains.CorgiEngine
         protected virtual void DisableDamageArea()
         {
             _damageAreaCollider.enabled = false;
-            Debug.Log("OFF");
         }
 
         /// <summary>
@@ -405,7 +396,6 @@ namespace MoreMountains.CorgiEngine
 
         public override void WeaponHit()
         {
-            Debug.Log(isCharge);
             TriggerWeaponOnHitFeedback();
 
         }
@@ -472,7 +462,6 @@ namespace MoreMountains.CorgiEngine
                 if (!isCharge)
                     _damageOnTouch.DamageCausedKnockbackForce = new Vector2(Mathf.Abs((wallKnifeDistance - _distanceTraveled) * dir.x) / 17, 0);
 
-                Debug.Log("나이프 " + _distanceTraveled + ", " + wallKnifeDistance);
                 _controller.GravityActive(false);
                 if ((_controller.State.IsCollidingLeft && dir.x < 0f)
                    || (_controller.State.IsCollidingRight && dir.x > 0f) || _distanceTraveled > wallKnifeDistance)
@@ -482,7 +471,6 @@ namespace MoreMountains.CorgiEngine
                     if (!ForceToAim || (_controller.State.IsCollidingAbove && dir.y > 0f) || (_controller.State.IsCollidingBelow && dir.y < 0f))
                         dir.x = dir.x > 0f ? knifeSpeed : -knifeSpeed;
 
-                    Debug.Log("weaponON After, " + dir);
                     _controller.SetForce(dir);
 
                 }
@@ -508,7 +496,6 @@ namespace MoreMountains.CorgiEngine
                 yield break;
             }
 
-            print($"나이프 끝 {_movement.CurrentState}");
             if (_meleeCoroutine != null)
             {
                 StopCoroutine(_meleeCoroutine);
@@ -522,7 +509,6 @@ namespace MoreMountains.CorgiEngine
             if (_movement.CurrentState == CharacterStates.MovementStates.Meleeing || _movement.CurrentState == CharacterStates.MovementStates.Parry)
             {
                 yield return new WaitForSeconds(0.1f);
-                print($"나이프 끝2");
                 if (_controller.State.IsGrounded || _movement.PreviousState == CharacterStates.MovementStates.Meleeing)
                 {
                     _movement.ChangeState(CharacterStates.MovementStates.Idle);
@@ -550,7 +536,6 @@ namespace MoreMountains.CorgiEngine
         [ContextMenu("슬래시")]
         public virtual void TriggerWeaponSlashFeedback()
         {
-            print($"슬래시 이펙트 시작");
             WeaponOnSlashFeedback?.PlayFeedbacks(this.transform.position);
             float rotAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90f;
             WeaponOnSlashFeedback?.transform.Rotate(Vector3.forward, rotAngle);
@@ -558,7 +543,6 @@ namespace MoreMountains.CorgiEngine
 
         public virtual void TriggerWeaponSlashEndFeedback()
         {
-            print($"슬래시 이펙트 끝");
             WeaponOnSlashEndFeedback?.PlayFeedbacks(this.transform.position);
         }
 

@@ -1,4 +1,4 @@
-﻿using MoreMountains.Tools;
+using MoreMountains.Tools;
 using System.Collections;
 using UnityEngine;
 
@@ -22,7 +22,6 @@ namespace MoreMountains.CorgiEngine
         {
             attackCount = (int)EnemyBalance.etc.etcList[3].floatValue;
             attackInterval = EnemyBalance.etc.etcList[2].floatValue;
-            Debug.Log(attackCount + " " + attackInterval + " 어택");
         }
 
         protected override void CaseWeaponStart()
@@ -34,7 +33,6 @@ namespace MoreMountains.CorgiEngine
 
         protected override IEnumerator MeleeWeaponAttack()
         {
-            Debug.Log("공격 실행 전 " + _attackInProgress);
 
             if (_attackInProgress) { yield break; }
 
@@ -49,7 +47,6 @@ namespace MoreMountains.CorgiEngine
             PlayerHealth playerHealth = character.GetComponent<PlayerHealth>();
             int targetLayer = character.gameObject.layer;
 
-            //yield return new WaitForSeconds(attackInterval);
             EnableDamageArea();
             yield return new WaitForSeconds(0.05f);
             HandleMiss();
@@ -57,7 +54,6 @@ namespace MoreMountains.CorgiEngine
             if (!_hitEventSent)
                 yield break;
 
-            //if (Owner.MovementState.CurrentState == CharacterStates.MovementStates.Falling)
             //    Owner.Freeze();
 
             playerHealth.catchedEnemy = _damageArea;
@@ -106,7 +102,6 @@ namespace MoreMountains.CorgiEngine
 
             TurnWeaponOff();
             Owner.UnFreeze();
-            Debug.Log("종료");
 
             yield return MMCoroutine.WaitFor(attackInterval);
             _attackInProgress = false;
@@ -134,7 +129,6 @@ namespace MoreMountains.CorgiEngine
 
         protected override void DisableDamageArea()
         {
-            Debug.Log("콜라이더 끔");
             _damageAreaCollider.enabled = false;
             if (_brain == null)
             {
@@ -151,7 +145,6 @@ namespace MoreMountains.CorgiEngine
             _damageOnTouch.isFreeze = isFreeze;
             _damageOnTouch.useEnumDamage = true;
             _damageOnTouch.damageType = DamageOnTouch.DamageType.Grind;
-            //_damageOnTouch.InvincibilityDuration = EnemyBalance.etc.etcList[2].floatValue;
         }
 
         protected override void HandleMiss()
@@ -160,11 +153,9 @@ namespace MoreMountains.CorgiEngine
             if (_hitEventSent)
                 return;
 
-            Debug.Log("스턴 미스");
             WeaponMiss();
             TurnWeaponOff();
             Owner.UnFreeze();
-            //_brain.ResetBrain();
 
             animator.SetBool("DamageArea", false);
             _brain.TransitionToState("MissDelay");
@@ -178,7 +169,6 @@ namespace MoreMountains.CorgiEngine
 
         public void WeaponEndManually()
         {
-            print("강제 종료");
             animator.SetBool("Hit", false);
             WeaponMiss();
             TurnWeaponOff();

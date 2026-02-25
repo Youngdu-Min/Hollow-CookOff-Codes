@@ -1,4 +1,4 @@
-﻿using MoreMountains.CorgiEngine;
+using MoreMountains.CorgiEngine;
 using UnityEngine;
 
 public class Cape : MonoBehaviour
@@ -36,7 +36,6 @@ public class Cape : MonoBehaviour
         }
 
         hp.InitialHealth = hp.MaximumHealth;
-        print($"스프라이트 {hp.CurrentHealth} {hp.MaximumHealth} {(float)hp.CurrentHealth / hp.MaximumHealth}");
 
         playerHealth.IsBlock = (GameObject damageObj) =>
         {
@@ -64,7 +63,6 @@ public class Cape : MonoBehaviour
             return;
         }
 
-        print($"스프라이트 {hp.CurrentHealth} {hp.MaximumHealth} {(float)hp.CurrentHealth / hp.MaximumHealth}");
         sprite.color = Color.Lerp(Color.red, Color.white, (float)hp.CurrentHealth / hp.MaximumHealth);
 
         if (hp.CurrentHealth <= 0)
@@ -72,16 +70,12 @@ public class Cape : MonoBehaviour
             sprite.gameObject.SetActive(false);
             SubWeapon.Instance.EndCloak();
             return;
-            //spriteGo.SetActive(false);
-            //character.MovementState.ChangeState(CharacterStates.MovementStates.Idle);
         }
         //else
         //{
         //    spriteGo.SetActive(true);
         //    character.MovementState.ChangeState(CharacterStates.MovementStates.Blocking);
         //}
-
-
 
 
     }
@@ -109,7 +103,6 @@ public class Cape : MonoBehaviour
         {
             aim.transform.localRotation = Quaternion.Euler(0, 0, 180);
         }
-        //aim.transform.localScale = Vector3.one;
     }
 
     private void OnDisable()

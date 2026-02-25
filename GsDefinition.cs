@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Hamster.ZG.Type;
@@ -26,7 +26,6 @@ public class FloatListType : IType
         List<float> floats = (List<float>)value;
 
         string join = string.Join(",", floats);
-        Debug.Log("write" + join);
         return $"[{join}]";
     }
 }
@@ -54,7 +53,6 @@ public class IntListType : IType
         List<int> ints = (List<int>)value;
 
         string join = string.Join(",", ints);
-        Debug.Log("write" + join);
         return $"[{join}]";
     }
 }

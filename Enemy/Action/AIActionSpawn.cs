@@ -1,4 +1,4 @@
-﻿using DG.Tweening;
+using DG.Tweening;
 using MoreMountains.Tools;
 using UnityEngine;
 using UnityEngine.Events;

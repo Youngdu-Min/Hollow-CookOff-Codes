@@ -1,4 +1,4 @@
-﻿using MoreMountains.CorgiEngine;
+using MoreMountains.CorgiEngine;
 using MoreMountains.Tools;
 using System.Collections;
 using UnityEngine;
@@ -15,7 +15,6 @@ public class RaycastBullet : MMPoolableObject
     private GameObject beBloodEffect;
 
 
-
     private void Awake()
     {
         lr = GetComponent<LineRenderer>();
@@ -30,7 +29,6 @@ public class RaycastBullet : MMPoolableObject
         RaycastHit2D hit = Physics2D.Raycast(firePoint, transform.right, range, Interactable);
         if (hit)
         {
-            print($"히트 레이저 불렛 {hit.transform.gameObject} ");
             lr.SetPosition(0, transform.position);
             lr.SetPosition(1, hit.point + (hit.point - (Vector2)transform.position).normalized * 0.3f);
             var hp = hit.collider.transform.GetComponent<Health>();

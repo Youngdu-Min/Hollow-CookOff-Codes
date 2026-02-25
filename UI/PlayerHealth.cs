@@ -1,4 +1,4 @@
-﻿using MoreMountains.CorgiEngine;
+using MoreMountains.CorgiEngine;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -141,7 +141,6 @@ public class PlayerHealth : Health
             return;
 
         CamLock.camLock.AbleSpawnReset();
-        //ScoreManager.Instance.score.deathsScore += 1;
         ScoreManager.Instance.score.deathCount += 1;
         AIActionSpawnCharater[] spawnCharacters = FindObjectsOfType<AIActionSpawnCharater>();
         foreach (AIActionSpawnCharater spawnCharacter in spawnCharacters)

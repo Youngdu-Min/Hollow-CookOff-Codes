@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using UnityEngine;
 
 namespace MoreMountains.CorgiEngine
@@ -39,7 +39,6 @@ namespace MoreMountains.CorgiEngine
                 saveTime = _randomTime - _brain.TimeInThisState;
                 return false;
             }
-            // return (_brain.TimeInThisState >= _randomTime);
         }
 
         protected override void RandomizeTime()
@@ -48,8 +47,6 @@ namespace MoreMountains.CorgiEngine
                 _randomTime = saveTime;
             else
                 _randomTime = EnemyBalance.etc.etcList[1].floatValue;
-            // _randomTime = Random.Range(AfterTimeMin, AfterTimeMax);
-            Debug.Log("랜덤 타임 " + _randomTime);
             /*
             if(_brain.Target != null)
             {
@@ -62,7 +59,6 @@ namespace MoreMountains.CorgiEngine
                 if (health == null)
                     health = _brain.Target.parent.parent.GetComponent<HealthExpend>();
 
-                Debug.Log("아머 " + health.gameObject);
                 health.currentArmor = health.inintialArmor;
 
             }
@@ -75,7 +71,6 @@ namespace MoreMountains.CorgiEngine
 
         public override void OnExitState()
         {
-            Debug.Log("끝");
             DecisionInProgress = false;
             if (_brain_armor.armorTarget != null && !IsInvoking(nameof(ArmorHeal)))
             {
@@ -92,13 +87,11 @@ namespace MoreMountains.CorgiEngine
             if (health == null)
                 health = obj.parent.parent.GetComponent<HealthExpend>();
 
-            Debug.Log("아머 " + health.gameObject);
             health.currentArmor = health.initialArmor;
         }
 
         void ArmorHeal()
         {
-            Debug.Log("뇌 " + _brain_armor.armorTarget);
             if (_brain_armor.armorTarget == null)
                 return;
 
@@ -108,7 +101,6 @@ namespace MoreMountains.CorgiEngine
             if (health == null)
                 health = _brain_armor.armorTarget.parent.parent.GetComponent<HealthExpend>();
 
-            Debug.Log("아머 " + health.gameObject);
             health.currentArmor = health.initialArmor;
         }
     }

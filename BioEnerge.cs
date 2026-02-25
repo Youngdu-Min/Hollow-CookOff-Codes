@@ -1,4 +1,4 @@
-﻿using MoreMountains.CorgiEngine;
+using MoreMountains.CorgiEngine;
 using MoreMountains.Feedbacks;
 using MoreMountains.Tools;
 using System.Collections;
@@ -40,13 +40,11 @@ public class BioEnerge : MonoBehaviour
             return true;
         }
 
-        Debug.Log("Not Enough BE.");
         return false;
     }
 
     public bool RestoreBE(float amount)
     {
-        print($"BE회복 {amount}");
         if (currentBE < MaxBE) //be가 최대치보다 적을때만 회복
         {
             currentBE = Mathf.Min(MaxBE, currentBE + amount);

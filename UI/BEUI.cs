@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,7 +27,6 @@ public class BEUI : MonoBehaviour
     private BioEnerge be;//플레이어 체력
     private float lastBe = 0f;
     private List<Image> BeImages = new List<Image>();
-    //private List<Image> emptyHeartsList = new List<Image>();
 
     private GameObject filledGauge, emptyGauge;
 
@@ -155,7 +154,6 @@ public class BEUI : MonoBehaviour
 
     public void UpdateBE(float _amout)
     {
-        //text.text = "HP : " + (int)hp + " / " + be.MaxBE;
         int fullHeart = (int)_amout / HollowBalance.action.actionList[2].intValue; //가득찬 하트 개수
 
         for (int i = 0; i < BeImages.Count; i++)

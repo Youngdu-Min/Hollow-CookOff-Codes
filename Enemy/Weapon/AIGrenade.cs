@@ -1,4 +1,4 @@
-﻿using MoreMountains.CorgiEngine;
+using MoreMountains.CorgiEngine;
 using System.Collections;
 using UnityEngine;
 
@@ -44,7 +44,6 @@ public class AIGrenade : MonoBehaviour
     {
         transform.parent = null;
         GameObject target = GameObject.FindGameObjectWithTag(targetTag);
-        print($"grenade target {target} / {gameObject}");
         Health targetHealth = target.GetComponent<Health>();
         bool lastInvulnerable = default;
         if (targetHealth && isIgnoreInvulnerable)
@@ -75,13 +74,11 @@ public class AIGrenade : MonoBehaviour
             position = Vector2.Lerp(start, end, linearT) + new Vector2(0f, height);
             posMag += position;
             transform.position = position;
-            print($"lastPos {lastPos} {position}");
             yield return null;
         }
 
         while (gameObject.activeInHierarchy)
         {
-            print($"lastPosCalcul {position - lastPos}");
             transform.position += (Vector3)(position - lastPos) * 1.5f;
             yield return null;
         }

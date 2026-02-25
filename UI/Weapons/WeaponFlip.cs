@@ -1,4 +1,4 @@
-﻿using MoreMountains.CorgiEngine;
+using MoreMountains.CorgiEngine;
 using UnityEngine;
 
 public class WeaponFlip : MonoBehaviour
@@ -79,7 +79,6 @@ public class WeaponFlip : MonoBehaviour
                 }
 
                 aim.SetReticleActive(!isWait);
-                //print(recticleSprite.enabled);
 
                 lastLocalScaleX = transform.localScale.x;
             }

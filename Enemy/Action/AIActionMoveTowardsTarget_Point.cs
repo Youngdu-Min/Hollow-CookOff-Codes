@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using UnityEngine;
 
 namespace MoreMountains.CorgiEngine
@@ -58,7 +58,6 @@ namespace MoreMountains.CorgiEngine
             if (_characterHorizontalMovement == null)
             {
                 _characterHorizontalMovement = transform.parent.parent.GetComponent<Character>()?.FindAbility<CharacterHorizontalMovement>();
-                Debug.Log(transform.parent.parent.name + " 찾음");
             }
 
             _controller = GetComponent<CorgiController>();
@@ -101,7 +100,6 @@ namespace MoreMountains.CorgiEngine
             if (currIdx >= 0) return;
             for (int i = 0; i < points.Length; i++)
             {
-                print($"거리 {Vector2.Distance(points[i].transform.position, _brain.transform.position)}");
                 if (Vector2.Distance(points[i].transform.position, _brain.transform.position) < 1.5f)
                     _brain.CurrentState.EvaluateTransitions(true);
             }
@@ -136,7 +134,6 @@ namespace MoreMountains.CorgiEngine
 
         private void WalkPoint()
         {
-            Debug.Log($"포인트 이동");
             if (Mathf.Abs(transform.position.x - currPoint.transform.position.x) <= MinimumDistance)
                 return;
 
@@ -148,21 +145,16 @@ namespace MoreMountains.CorgiEngine
 
         private void SwingPoint()
         {
-            print($"스윙 0 {_brain.Target.gameObject}");
             if (isJump && !isSpin)
             {
                 if (_brain.Target.position.y > _controller.transform.position.y)
                 {
-                    print($"스윙 1-1");
                     Vector2 sumVector = _controller.transform.position + _controller.transform.up * jumpSpeed * Time.deltaTime;
                     _controller.GravityActive(false);
                     _controller.SetTransformPosition(sumVector);
-                    Debug.Log($"포인트 점프: 이전 {_controller.transform.position - _controller.transform.up} | 이후 {_controller.transform.position}");
-                    //_controller.SetTransformPosition(_controller.transform.position + transform.up * Time.deltaTime);
                 }
                 else
                 {
-                    //print($"스윙 1-2");
                     isJump = false;
                     isSpin = true;
                     radius = Vector3.Distance(new Vector3(_brain.Target.position.x, 0, 0), new Vector3(_controller.transform.position.x, 0, 0));
@@ -180,7 +172,6 @@ namespace MoreMountains.CorgiEngine
             {
                 float currPosDiff;
                 lastPosDiff = Mathf.Abs((float)((System.Math.Truncate(endPosX * 10) / 10) - (System.Math.Truncate(_controller.transform.position.x * 10) / 10)));
-                //print($"스윙 2");
                 RefreshLine();
 
                 runningTime += Time.deltaTime * speed;
@@ -192,7 +183,6 @@ namespace MoreMountains.CorgiEngine
 
                 if ((System.Math.Truncate(endPosX * 10) / 10) == (System.Math.Truncate(_controller.transform.position.x * 10) / 10) || lastPosDiff < currPosDiff)
                 {
-                    print($"스윙 3");
                     _controller.transform.position = new Vector3(endPosX, _controller.transform.position.y, _controller.transform.position.z);
                     SafeExit();
 
@@ -219,16 +209,12 @@ namespace MoreMountains.CorgiEngine
 
         public override void OnEnterState()
         {
-            print("이동포인트 설정 Enter");
             base.OnEnterState();
 
             charaColl.DamageCausedKnockbackType = DamageOnTouch.KnockbackStyles.NoKnockback;
-            //charaColl.enabled = false;
-            Debug.Log($"{_brain.LastAction} {charaColl.gameObject} 콜라이더 온");
 
             if (originTarget)
             {
-                print("이동포인트 설정1");
                 SetPoint();
                 _brain.Target = currPoint.transform;
 
@@ -239,7 +225,6 @@ namespace MoreMountains.CorgiEngine
 
         IEnumerator TargetWait()
         {
-            print("이동포인트 설정2");
             _brain.FindTarget();
             yield return new WaitUntil(() => _brain.Target != null);
             originTarget = _brain.Target;
@@ -252,10 +237,8 @@ namespace MoreMountains.CorgiEngine
         /// </summary>
         public override void OnExitState()
         {
-            print("이동포인트 설정 Exit");
             base.OnExitState();
             charaColl.DamageCausedKnockbackType = DamageOnTouch.KnockbackStyles.AddForce;
-            //charaColl.enabled = true;
             _characterHorizontalMovement?.SetHorizontalMove(0f);
 
             _brain.Target = originTarget;
@@ -264,7 +247,6 @@ namespace MoreMountains.CorgiEngine
 
             if (moveMode == MoveMode.Swing)
                 SafeExit();
-            Debug.Log($"{charaColl.gameObject} 콜라이더 오프 / 타겟 {_brain.Target}");
         }
 
         void SafeExit()

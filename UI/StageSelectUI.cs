@@ -1,4 +1,4 @@
-﻿using MoreMountains.Feedbacks;
+using MoreMountains.Feedbacks;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -89,7 +89,6 @@ public class StageSelectUI : MonoBehaviour
             _curArea = Mathf.Clamp(_curArea, 0, areaDatas.Length - 1);
 
             _curStage = 0;
-            print($"Area {curArea} Stage {curStage}");
             /*
             if (areaDatas[curArea].Stages.Length - 1 < curStage)
                 curStage = areaDatas[curArea].Stages.Length - 1;
@@ -182,13 +181,10 @@ public class StageSelectUI : MonoBehaviour
         ScoreManager.stageIndex = StageIndex();
 
         int _score = SaveDataManager.Instance.GetHighscore(StageIndex(), (Difficulty)curDifficulty);
-        print($"Score {StageIndex()} {_score}");
         scoreText.text = _score.ToString("00000");
 
-        print($"Stage {areaDatas[curArea].Stages[curStage].SceneName}");
         stageText.text = areaDatas[curArea].Stages[curStage].SceneName;
 
-        print($"Area {curArea} Stage {curStage} IsCutscene {!areaDatas[curArea].Stages[curStage].IsCutscene}");
 
         SetBestTime(ref clearTimeText);
 
@@ -277,7 +273,6 @@ public class StageSelectUI : MonoBehaviour
     }
 
 
-
     private void Initiate()
     {
 
@@ -322,7 +317,6 @@ public class StageSelectUI : MonoBehaviour
 
     public ScoreRank GetRank(int stage, int score)
     {
-        Debug.Log($"종합점수 {stage} {score}");
         Result.Rank table = Result.Rank.RankMap[stage];
 
         if (score == 0)
@@ -382,7 +376,6 @@ public class StageSelectUI : MonoBehaviour
         }
         else
         {
-            Debug.Log("입장할 수 없습니다. 이전 스테이지를 먼저 클리어하세요");
         }
     }
 

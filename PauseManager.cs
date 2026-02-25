@@ -1,4 +1,4 @@
-﻿using MoreMountains.CorgiEngine;
+using MoreMountains.CorgiEngine;
 using MoreMountains.Tools;
 using System.Collections.Generic;
 using TMPro;
@@ -50,7 +50,6 @@ public class PauseManager : MonoBehaviour
     }
 
 
-
     public void EscClick()
     {
         if (SettingPopupUI.Instance.IsOpen())
@@ -90,7 +89,6 @@ public class PauseManager : MonoBehaviour
     {
         //현재 씬 재시작
         instance.ResumeGame();
-        print("현재 씬 재시작");
         MMSceneLoadingManager.LoadScene(SceneManager.GetActiveScene().name);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
@@ -139,12 +137,10 @@ public class PauseManager : MonoBehaviour
     {
         if (instance.pauseCalled.ContainsKey(source))
         {
-            Debug.Log(source + " wants " + pause);
             instance.pauseCalled[source] = pause;
         }
         else
         {
-            Debug.Log(source + " wants " + pause);
             instance.pauseCalled.Add(source, pause);
         }
 
@@ -183,12 +179,10 @@ public class PauseManager : MonoBehaviour
     {
         if (source == null)
         {
-            print("source is null");
             return false;
         }
 
         bool b = instance.pauseCalled.ContainsKey(source);
-        print($"{source} {b}");
         return b ? instance.pauseCalled[source] : false;
     }
 

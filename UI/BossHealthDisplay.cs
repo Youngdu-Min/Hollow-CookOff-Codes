@@ -1,4 +1,4 @@
-﻿using MoreMountains.CorgiEngine;
+using MoreMountains.CorgiEngine;
 using MoreMountains.Tools;
 using System.Collections;
 using TMPro;
@@ -185,9 +185,6 @@ public class BossHealthDisplay : Health
         if (bossDeathChat)
         {
             ChatManager.Instance.StartChat(deathChatId);
-            //TextAsset tmpAsset = ChatManager.chmana.chatDB.FindDialogueByName(deathChatId);
-            //JsonMaker.Instance.ChangeGtxt(tmpAsset);
-            //ChatManager.chmana.CallNewStart();
             Kill();
         }
         else
@@ -370,7 +367,6 @@ public class BossHealthDisplay : Health
 
         phaseEvent.Invoke();
         _character.UnFreeze();
-        //Damage(breakDamage, this.gameObject, 0, 0, Vector3.zero);
         if (nextPhaseState != null && nextPhaseState != "")
         {
             brain.TransitionToState(nextPhaseState);
@@ -379,7 +375,6 @@ public class BossHealthDisplay : Health
         {
             brain.ResetBrain();
         }
-        //CurrentHealth -= breakDamage;
 
         return true;
     }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -24,7 +24,6 @@ namespace MoreMountains.CorgiEngine
             base.OnEnterState();
             _prevTarget = _brain.Target;
             _brain.Target = _target;
-            //actionEvent.Invoke(_brain);
         }
 
         /// <summary>

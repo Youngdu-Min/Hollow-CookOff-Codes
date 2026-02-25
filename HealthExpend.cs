@@ -1,4 +1,4 @@
-﻿using MoreMountains.CorgiEngine;
+using MoreMountains.CorgiEngine;
 using MoreMountains.Feedbacks;
 using MoreMountains.Tools;
 using System.Collections;
@@ -164,7 +164,6 @@ public class HealthExpend : Health
     IEnumerator DataSync()
     {
         yield return null;
-        //yield return new WaitUntil(() => _character.CharacterBrain != null);
         for (int i = 0; i < EnemyBalance.Data.DataList.Count; i++)
         {
             if (_character.CharacterBrain?._aiType.ToString() == EnemyBalance.Data.DataList[i].strValue)
@@ -173,8 +172,6 @@ public class HealthExpend : Health
                 maxArmor = initialArmor;
                 InitialHealth = EnemyBalance.Data.DataList[i].hp;
                 MaximumHealth = InitialHealth;
-                Debug.Log($"적 갑옷 {gameObject.name} {initialArmor} {i}");
-                Debug.Log($"적 체력 {gameObject.name} {InitialHealth} {i}");
                 break;
             }
         }
@@ -213,9 +210,7 @@ public class HealthExpend : Health
 
     public IEnumerator RemoveArmor()
     {
-        print($"RemoveArmor 호출 전");
         yield return new WaitUntil(() => currentArmor > 0);
-        print($"RemoveArmor 호출 후");
         Damage(currentArmor, gameObject, 0, 0, Vector3.zero);
     }
 
@@ -228,7 +223,6 @@ public class HealthExpend : Health
     /// <param name="invincibilityDuration">The duration of the short invincibility following the hit.</param>
     public override void Damage(int damage, GameObject instigator, float flickerDuration, float invincibilityDuration, Vector3 damageDirection)
     {
-        Debug.Log(gameObject + " 데미지 " + damage + " " + instigator + " " + invincibilityDuration);
         if (_character != null
             && (_character.ConditionState.CurrentState == CharacterStates.CharacterConditions.Paused ||
             _character.ConditionState.CurrentState == CharacterStates.CharacterConditions.Frozen))
@@ -241,7 +235,6 @@ public class HealthExpend : Health
                 if (AlreadyDead())
                 {
                     gameObject.layer = 21;
-                    //GetComponent<BoxCollider2D>().enabled = false;
                 }
                 return;
             }
@@ -308,7 +301,6 @@ public class HealthExpend : Health
 
         LastDamageDirection = damageDirection;
         relativeX = this.gameObject.transform.position.x - instigator.transform.position.x > 0 ? 1 : -1;
-        Debug.Log("X " + relativeX);
         OnHit?.Invoke();
 
         if (CurrentHealth <= 0)
@@ -395,8 +387,6 @@ public class HealthExpend : Health
 
         CamLock.camLock.ableCount -= 1;
         CamLock.camLock.AbleSpawning();
-        print($"죽음 {gameObject.name} {CamLock.camLock.ableCount}");
-        // _animator.SetTrigger("Death");
     }
     public override void Revive()
     {
@@ -412,12 +402,10 @@ public class HealthExpend : Health
 
     private void Dodge(GameObject target)
     {
-        Debug.Log("피하기 시작");
         if (this.transform.position.x < target.transform.position.x)
             this.transform.position = new Vector2(this.transform.position.x + dodgeAmt, this.transform.position.y);
         else
             this.transform.position = new Vector2(this.transform.position.x - dodgeAmt, this.transform.position.y);
-        Debug.Log("피함");
 
     }
 }

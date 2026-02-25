@@ -1,4 +1,4 @@
-﻿using TMPro;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -54,7 +54,6 @@ public class ResultUI : MonoBehaviour
     }
     public void TryAgain()
     {
-        print("현재 씬 재시작");
         ScoreManager.Instance.score.Clear();
         CloseDisplay();
         MoreMountains.Tools.MMSceneLoadingManager.LoadScene(SceneManager.GetActiveScene().name);

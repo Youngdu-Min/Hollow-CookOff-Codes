@@ -1,4 +1,4 @@
-﻿using MoreMountains.CorgiEngine;
+using MoreMountains.CorgiEngine;
 using MoreMountains.Feedbacks;
 using System.Collections.Generic;
 using UnityEngine;
@@ -56,11 +56,9 @@ public class PauseArea : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("얼음 충돌1-1 " + collision.gameObject);
         freezeObjects.Add(collision);
         if (collision.TryGetComponent(out Character character))
         {
-            Debug.Log("얼음 충돌2 " + collision.gameObject);
             character.Freeze();
             if (character.gameObject.tag == "Boss" && leftTime > bossLeftTime)
             {
@@ -111,7 +109,6 @@ public class PauseArea : MonoBehaviour
             }
             if (freezeObj.TryGetComponent(out MovingPlatform moving))
             {
-                //Debug.Log("무빙플랫폼 접촉해제");
                 moving.AuthorizeMovement();//다시 움직임
             }
             if (freezeObj.TryGetComponent(out SpinningObject _spin))

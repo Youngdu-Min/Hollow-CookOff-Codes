@@ -1,4 +1,4 @@
-﻿using MoreMountains.Tools;
+using MoreMountains.Tools;
 using System.Collections;
 using UnityEngine;
 
@@ -99,12 +99,10 @@ namespace MoreMountains.CorgiEngine
 
             if (_damageArea == null)
             {
-                Debug.Log("데미지박스 없음");
                 CreateDamageArea();
                 DisableDamageArea();
                 RegisterEvents();
             }
-            // _damageOnTouch.Owner = Owner.gameObject;
 
             _brain = Owner.CharacterBrain;
 
@@ -166,7 +164,6 @@ namespace MoreMountains.CorgiEngine
             base.WeaponUse();
             coroutine = MeleeWeaponAttack();
             StartCoroutine(coroutine);
-            Debug.Log("`근접 " + _damageOnTouch.useEnumDamage);
         }
 
         /// <summary>
@@ -234,7 +231,6 @@ namespace MoreMountains.CorgiEngine
         public override void TurnWeaponOff()
         {
             base.TurnWeaponOff();
-            //Debug.Log("꺼짐 " + _damageOnTouch.damageType);
             OnDisable();
             DisableDamageArea();
         }
@@ -244,7 +240,6 @@ namespace MoreMountains.CorgiEngine
         /// </summary>
         protected virtual void DisableDamageArea()
         {
-            //Debug.Log("콜라이더 끔");
             _damageAreaCollider.enabled = false;
             if (_brain == null)
             {
@@ -298,7 +293,6 @@ namespace MoreMountains.CorgiEngine
                 TurnWeaponOff();
                 _brain.TransitionToState(changeStateStr);
             }
-            Debug.Log($"히트 {_hitEventSent}");
         }
 
         /// <summary>
@@ -313,7 +307,6 @@ namespace MoreMountains.CorgiEngine
             }
 
         }
-
 
 
         /// <summary>

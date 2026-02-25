@@ -1,4 +1,4 @@
-﻿using MoreMountains.Tools;
+using MoreMountains.Tools;
 using UnityEngine;
 
 namespace MoreMountains.CorgiEngine
@@ -26,23 +26,19 @@ namespace MoreMountains.CorgiEngine
         {
             Target = null;
             float dist = 100;
-            Debug.Log("Searching By Order");
             GameObject[] gos = GameObject.FindObjectsOfType(typeof(GameObject)) as GameObject[]; //will return an array of all GameObjects in the scene
             foreach (GameObject go in gos)
             {
                 HealthExpend armor = go.GetComponent<HealthExpend>();
                 if (armor == null || armor.maxArmor <= 0)
                 {
-                    Debug.Log("컨티뉴 " + go.gameObject);
                     continue;
                 }
                 if (go.layer == LayerMask.NameToLayer(TargetLayer) && go.gameObject != this.gameObject && armor.currentArmor < armor.maxArmor)
                 {
-                    Debug.Log("탐색 " + go.gameObject.name + " " + armor.initialArmor + " " + armor.maxArmor);
                     float currdist = Vector3.Distance(this.gameObject.transform.position, go.gameObject.transform.position);
                     if (currdist < dist)
                     {
-                        Debug.Log("Searching Refresh(Armor)");
                         Target = go.transform;
                         armorTarget = go.transform;
                         dist = currdist;
@@ -61,14 +57,12 @@ namespace MoreMountains.CorgiEngine
 
         public override void FindTarget()
         {
-            Debug.Log("Searching");
             line.enabled = false;
             GameObject[] gos = GameObject.FindObjectsOfType(typeof(GameObject)) as GameObject[]; //will return an array of all GameObjects in the scene
             foreach (GameObject go in gos)
             {
                 if (go.layer == LayerMask.NameToLayer("Player") && go.gameObject != this.gameObject)
                 {
-                    Debug.Log(go.gameObject.name);
                     Target = go.transform;
                     break;
                 }

@@ -129,7 +129,6 @@ public class DamageOnTouch_Knife : DamageOnTouch
             }
         }
 
-        // if ((!armor && !bossHealth) || armor && armor.curArmor <= 0)
         if (armor?.currentArmor <= 0 && !armor.gameObject.CompareTag("Block"))
         {
             if (_collidingCollider.gameObject.CompareTag("Bio"))
@@ -169,7 +168,6 @@ public class DamageOnTouch_Knife : DamageOnTouch
 
             if (!delayAttack)
             {
-                //StartCoroutine(IgnoreGravityApplyDamageCausedKnockback());
                 _knockbackForce = DamageCausedKnockbackForce;
                 Vector2 relativePosition = _colliderCorgiController.transform.position - Owner.transform.position;
                 _knockbackForce.x = relativePosition.x > 0 ? _knockbackForce.x : -_knockbackForce.x;
@@ -198,7 +196,6 @@ public class DamageOnTouch_Knife : DamageOnTouch
                     });
                      
                 });
-                //ApplyDamageCausedKnockback();
                 TryDamage(DamageCaused, gameObject, InvincibilityDuration, InvincibilityDuration, Vector3.up);
                 if (_colliderHealth.ImmuneToKnockback)
                     StartCoroutine(melee.StopMelee());
@@ -262,7 +259,6 @@ public class DamageOnTouch_Knife : DamageOnTouch
     }
 
 
-
     protected override void ApplyDamageCausedKnockback()
     {
         if (_colliderHealth.ImmuneToKnockback)
@@ -292,7 +288,6 @@ public class DamageOnTouch_Knife : DamageOnTouch
             }
             if (DamageCausedKnockbackType == KnockbackStyles.AddForce)
             {
-                Debug.Log(_knockbackForce);
                 _colliderCorgiController.AddForce(_knockbackForce);
             }
         }

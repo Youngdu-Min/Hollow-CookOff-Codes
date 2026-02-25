@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class CurrentWeaponUI : MonoBehaviour
@@ -24,7 +24,6 @@ public class CurrentWeaponUI : MonoBehaviour
         }
 
         instance = this;
-        // Debug.Log("인스턴스");
         originWeaponSize = mainWpImage.GetComponent<RectTransform>().sizeDelta;
         Initiate();
     }

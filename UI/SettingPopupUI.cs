@@ -1,4 +1,4 @@
-﻿using MoreMountains.Tools;
+using MoreMountains.Tools;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -114,7 +114,6 @@ public class SettingPopupUI : MonoBehaviour
     public void SetFullScreen(bool check)
     {
         currentSettings.fullscreen = check;
-        //Screen.fullScreen = check;
     }
 
 
@@ -162,7 +161,6 @@ public class SettingPopupUI : MonoBehaviour
         Cursor.lockState = Screen.fullScreen ? CursorLockMode.None : CursorLockMode.Confined;
 
         //언어
-        //LanguageSelector.Instance.OnLanguageChanged(currentSettings.languageIndex);
 
         originSettings.musicVolume = currentSettings.musicVolume;
         originSettings.SfxVolume = currentSettings.SfxVolume;
@@ -170,8 +168,6 @@ public class SettingPopupUI : MonoBehaviour
         originSettings.languageIndex = (int)LanguageSelector.SelectedLanguage;
         SaveSettings();
     }
-
-
 
 
     public void ChangeResolution(TMP_Dropdown dropdown)

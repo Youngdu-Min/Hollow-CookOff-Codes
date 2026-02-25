@@ -1,4 +1,4 @@
-﻿using MoreMountains.CorgiEngine;
+using MoreMountains.CorgiEngine;
 using UnityEngine;
 
 public class MainCharacter : MonoBehaviour
@@ -20,7 +20,6 @@ public class MainCharacter : MonoBehaviour
         if (instance == null)
             return;
 
-        print("컨트롤 불가");
         instance.GetComponent<CharacterFlip>().enabled = false;
         instance.GetComponentsInChildren<WeaponAim>(true).ForEach(x => x.enabled = false);
         Cursor.visible = true;
@@ -37,7 +36,6 @@ public class MainCharacter : MonoBehaviour
         if (instance == null)
             return;
 
-        print("컨트롤 가능");
         instance.GetComponent<CharacterFlip>().enabled = true;
         instance.GetComponentsInChildren<WeaponAim>(true).ForEach(x => x.enabled = true);
         CharacterHandleWeapon[] weapons = instance.GetComponentsInChildren<CharacterHandleWeapon>();
@@ -52,7 +50,6 @@ public class MainCharacter : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.Log("주인공 스크립트가 중복됨");
         }
         else
         {

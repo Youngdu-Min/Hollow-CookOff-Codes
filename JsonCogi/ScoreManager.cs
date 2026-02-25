@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -146,7 +146,6 @@ public class Score
         parryScore = parryCount * evaluation[4].score;
         totalScore += parryScore;
 
-        Debug.Log($"ScoreTest {airshootScore} {flyingTarget}");
         airshootScore = Mathf.Min(airshootScore, evaluation[5].score);
         totalScore += airshootScore;
 
@@ -177,8 +176,6 @@ public class Score
         totalScore += perfectBonus;
 
     }
-
-
 
 
 }

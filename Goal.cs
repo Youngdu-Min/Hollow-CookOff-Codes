@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
@@ -13,7 +13,6 @@ public class Goal : MonoBehaviour
     [ContextMenu("골")]
     public void TriggerGoal()
     {
-        Debug.Log("골");
 
         ResultUI _ui = FindObjectOfType<ResultUI>();
         _ui.OpenDisplay();

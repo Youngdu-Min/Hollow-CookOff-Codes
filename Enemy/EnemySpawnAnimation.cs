@@ -1,4 +1,4 @@
-﻿using MoreMountains.Tools;
+using MoreMountains.Tools;
 using System.Collections;
 using UnityEngine;
 
@@ -42,7 +42,6 @@ public class EnemySpawnAnimation : MonoBehaviour
 
         while (opacityRatio < 1f)
         {
-            print("opacityRatio : " + opacityRatio);
             opacityRatio = timer / opacityGradiantTime;
             color.a = opacityRatio;
 
@@ -57,7 +56,6 @@ public class EnemySpawnAnimation : MonoBehaviour
         timer = 0f;
         while (colorRatio < 1f)
         {
-            print("colorRatio : " + colorRatio);
             colorRatio = timer / colorGradiantTime;
 
             color.r = colorRatio;

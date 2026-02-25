@@ -1,4 +1,4 @@
-﻿using Cysharp.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,7 +13,6 @@ public class ArmorHealthDisplay : MonoBehaviour
     [SerializeField]
     private GameObject hpBarObject;
     private RectTransform hpBarAnchor;
-    //private Sprite healthBar, armorBar;
 
     private Image healthImage, armorImage;
     [HideInInspector]

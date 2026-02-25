@@ -1,4 +1,4 @@
-﻿using DG.Tweening;
+using DG.Tweening;
 using MoreMountains.CorgiEngine;
 using System.Collections;
 using UnityEngine;
@@ -80,7 +80,6 @@ public class Presser : MonoBehaviour
             foreach (var item in lastColliders)
             {
                 float targetY = item.transform.position.y + item.bounds.extents.y;
-                print($"pull up {item.name} {targetY}");
                 item.transform.DOMove(new Vector3(item.transform.position.x, targetY, item.transform.position.z), 0.1f);
             }
             lastColliders = null;
@@ -128,7 +127,6 @@ public class Presser : MonoBehaviour
                 float distanceBottom = presserHitbox.transform.position.y + presserHitbox.offset.y - presserHitbox.size.y / 2f - minY;
 
                 float pushPower = 100 * Time.deltaTime;
-                // Debug.Log(distanceBottom);
 
                 if (pushPower > distanceBottom)
                 {

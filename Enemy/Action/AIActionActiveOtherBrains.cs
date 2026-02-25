@@ -1,4 +1,4 @@
-﻿using MoreMountains.Tools;
+using MoreMountains.Tools;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -78,7 +78,6 @@ namespace MoreMountains.CorgiEngine
 
                if(freezeCount == brains.Count)
                 {
-                    print($"모든 브레인 얼어 붙음");
                     _brain.TransitionToState(allFreezeTransitionState);
                     isAllFreeze = true;
                     return;
@@ -91,18 +90,15 @@ namespace MoreMountains.CorgiEngine
 
                 randomIdx = Random.Range(0, brains.Count);
                 brains[randomIdx].BrainActive = true;
-                print($"브레인 인덱스 랜덤 {randomIdx}");
 
                 brains[randomIdx].BrainActive = false;
             }
 
             brains[randomIdx].BrainActive = true;
-            print($"브레인 인덱스 {randomIdx} | 상태 {brains[randomIdx].CurrentState.StateName} | {brains[randomIdx].CurrentState.StateName == brains[randomIdx].Freeze}");
             brains[randomIdx].ResetBrain();
             brains[randomIdx].Target = _brain.Target;
             lastBrain = brains[randomIdx];
 
-            Debug.Log($"랜덤 브레인 활성화 {randomIdx}");
         }
 
         public void TryUnfreezeBrain()
@@ -123,7 +119,6 @@ namespace MoreMountains.CorgiEngine
             brains[i].Target = _brain.Target;
             lastBrain = brains[i];
 
-            Debug.Log($"랜덤 뇌 활성화 {i}");
         }
 
 
@@ -132,7 +127,6 @@ namespace MoreMountains.CorgiEngine
             brains.Remove(_brain);
             if (lastBrain == _brain)
             {
-                print($"얼터 {lastBrain}");
                 lastBrain = null;
                 alterBrainEvent.Invoke();
             }

@@ -1,4 +1,4 @@
-﻿using MoreMountains.CorgiEngine;
+using MoreMountains.CorgiEngine;
 using System.Collections;
 using UnityEngine;
 
@@ -211,17 +211,14 @@ public class SubWeapon : MonoBehaviour
         };
         float _timePassed = Mathf.Max(0, Time.time - lastCloakActivated - GSManager.Cloak.regenCool);
 
-        print($"Cloak UseTime Start BF {cloakHP.CurrentHealth} {(int)(_timePassed * GSManager.Cloak.hpRegen)}");
         if (lastCloakHp + _timePassed * GSManager.Cloak.hpRegen > 0)
         {
             cloakHP.SetHealth(lastCloakHp + (int)(_timePassed * GSManager.Cloak.hpRegen), this.gameObject);
-            print($"Cloak UseTime Start AF {cloakHP.CurrentHealth} {(int)(_timePassed * GSManager.Cloak.hpRegen)}");
             Cloak.SetActive(true);
             characterHealth.OnHit += EndCloak;
             horizontalMovement.MovementSpeed /= capeDivideSpeed;
             character.MovementState.ChangeState(CharacterStates.MovementStates.Blocking);
         }
-        // Debug.Log(heal + ", " + cloakHP.CurrentHealth);
     }
 
     public void EndCloak()
@@ -309,7 +306,6 @@ public class SubWeapon : MonoBehaviour
     public float ClockHealthRatio()
     {
         float _timePassed = Mathf.Max(0, Time.time - lastCloakActivated - GSManager.Cloak.regenCool);
-        print($"Cloak UseTime {lastCloakHp + _timePassed * GSManager.Cloak.hpRegen} / {_timePassed} / {cloakHP.CurrentHealth} / currentRatio! {(float)(lastCloakHp + _timePassed * GSManager.Cloak.hpRegen) / cloakHP.MaximumHealth} ");
         return (float)(lastCloakHp + _timePassed * GSManager.Cloak.hpRegen) / cloakHP.MaximumHealth;
     }
 }

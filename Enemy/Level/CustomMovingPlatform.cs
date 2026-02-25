@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using static System.Math;
 
 public class CustomMovingPlatform : MonoBehaviour
@@ -48,8 +48,6 @@ public class CustomMovingPlatform : MonoBehaviour
     void Update()
     {
         LerpPlatform();
-        //Debug.Log($"{gameObject} | {transform.eulerAngles.z} | {endRot}");
-        //Debug.Log($"{gameObject} Angle {Mathf.Abs(Mathf.DeltaAngle(transform.eulerAngles.z, lastHideAngle))} | {perHideAngle}");
 
         if (permitBlink)
         {
@@ -110,6 +108,5 @@ public class CustomMovingPlatform : MonoBehaviour
         if (currLength == 0)
             gameObject.SetActive(false);
 
-        //Debug.Log($"길이 {currLength} {electricWall.leftOffset}, {currRightOffset} {electricWall.rightOffset} | {currentTime / lerpTime}");
     }
 }

@@ -1,4 +1,4 @@
-﻿using MoreMountains.Tools;
+using MoreMountains.Tools;
 using System.Collections;
 using UnityEngine;
 
@@ -27,7 +27,6 @@ namespace MoreMountains.CorgiEngine
 
 
             mainWeapon.CurrentWeapon.Owner.CharacterAnimator.enabled = false;
-            print($"패리 시작 {mainWeapon.WeaponAttachment.gameObject} {mainWeapon.WeaponAttachment.gameObject.activeSelf}");
 
             if (!mainWeapon.WeaponAttachment.gameObject.activeSelf)
                 mainWeapon.WeaponAttachment.gameObject.SetActive(true);

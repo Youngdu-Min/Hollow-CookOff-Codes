@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 
 public class ElectricWall : MonoBehaviour
@@ -50,7 +50,6 @@ public class ElectricWall : MonoBehaviour
             transform.SetParent(ElectricWallManager.Instance().transform);
         ElectricWallManager.Instance().AddWall(this);
 
-        // platformBox = GetComponent<BoxCollider2D>();
 
         platformBox.isTrigger = true;
         platformBox.usedByComposite = false;
