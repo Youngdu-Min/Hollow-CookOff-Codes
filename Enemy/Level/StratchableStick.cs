@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class StratchableStick : MonoBehaviour
 {
-    //미완성
-    public Vector2 point1, point2;
-
     public GameObject target;
 
     [SerializeField]
@@ -43,11 +40,4 @@ public class StratchableStick : MonoBehaviour
         box2d.size = new Vector2(box2d.size.x, _length);
 
     }
-
-    public void SetPoint(Vector2 pos1, Vector2 pos2)
-    {
-
-    }
-
-
 }
