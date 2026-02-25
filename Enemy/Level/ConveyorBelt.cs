@@ -36,8 +36,6 @@ public class ConveyorBelt : MonoBehaviour
                     collision.transform.Translate(direction * Time.deltaTime);
             }
         }
-        //collision.attachedRigidbody.MovePosition((Vector2)collision.transform.position + direction * Time.deltaTime);
-        //collision.transform.Translate(direction * Time.deltaTime);
     }
 
     public void SetDirection(Vector2 direction)
@@ -50,7 +48,6 @@ public class ConveyorBelt : MonoBehaviour
     {
         for (int i = transform.childCount - 1; i >= 0; i--)
             DestroyImmediate(transform.GetChild(i).gameObject);
-        //DestroyImmediate(transform.GetChild(0).gameObject);
 
         for (int i = 0; i < generateCount; i++)
         {
