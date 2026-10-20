@@ -25,7 +25,7 @@ Developed as a team project — responsible for overall programming.
 - **FSM-Based Enemy AI**: Designed combat behaviors for regular enemies and multi-phase bosses using a class-encapsulated FSM architecture.
 - **Weapon System**: Modularized weapon types and firing logic for easy extensibility and designer-friendly configuration.
 - **Player Special Abilities**: Implemented action-oriented combat systems including bullet parry and slash combos.
-- **Data-Driven Dialogue System**: Utilized JSON data to load and play dialogues without code changes.
+- **Data-Driven Dialogue System**: Managed dialogue content as ScriptableObject assets so it can be edited and played without code changes.
 
 ## Code Structure
 
@@ -40,7 +40,7 @@ Hollow-CookOff-Codes/
 ├── BulletParry.cs            # Bullet parry system
 ├── SlashCombo.cs             # Slash combo system
 ├── ChatDB.cs                 # Dialogue database
-├── ChatEventTriger.cs        # Dialogue event trigger
+├── ChatEventTrigger.cs       # Dialogue event trigger
 ├── SaveDataManager.cs        # Save data management
 └── BGMManager.cs             # Audio control
 ```
@@ -62,8 +62,12 @@ Hollow-CookOff-Codes/
 - **Special Ability**: Enables unique special attacks depending on the currently equipped weapon.
 
 ### 4. Dialogue System
-- Dialogue content is managed via JSON, allowing non-programmers to edit scripts without touching the code.
+- Dialogue content is managed as ScriptableObject assets (`DialogueDB_Kor`, `DialogueDB_Eng`), allowing non-programmers to edit scripts without touching the code.
 - `ChatEventTrigger` fires dialogue sequences at specific locations or conditions within a scene.
+
+## Technical Document
+
+Internal design details (enemy AI extensions, boss health segments and slash phases, knife / parry / grapple combat, dialogue system) are documented in the [technical document](docs/TechnicalDesign.md) (Korean).
 
 ## License
 

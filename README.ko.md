@@ -25,7 +25,7 @@ FSM 기반 AI와 핵심 전투 시스템을 설계·구현한 액션 사이드 �
 - **FSM 기반 적 AI**: 상태별로 캡슐화된 FSM을 통해 일반 적과 멀티 페이즈 보스의 전투 행동을 구현했습니다.
 - **무기 시스템**: 무기 타입과 사격 로직을 모듈화하여 확장이 용이하도록 설계했습니다.
 - **플레이어 특수 능력**: 탄환 패링, 슬래시 콤보 등 액션 중심의 전투 시스템을 구현했습니다.
-- **데이터 기반 대화 시스템**: JSON 데이터를 활용해 코드 수정 없이 대화 내용을 편집하고 재생할 수 있습니다.
+- **데이터 기반 대화 시스템**: 대화 내용을 ScriptableObject 에셋으로 관리해 코드 수정 없이 편집·재생할 수 있습니다.
 
 ## 코드 구조
 
@@ -40,9 +40,9 @@ Hollow-CookOff-Codes/
 ├── BulletParry.cs            # 탄환 패링 시스템
 ├── SlashCombo.cs             # 슬래시 콤보 시스템
 ├── ChatDB.cs                 # 대화 데이터베이스
-├── ChatEventTriger.cs        # 대화 이벤트 트리거
+├── ChatEventTrigger.cs       # 대화 이벤트 트리거
 ├── SaveDataManager.cs        # 세이브 데이터 관리
-└── BGMManager.cs             # 사운드 제어```
+└── BGMManager.cs             # 사운드 제어
 ```
 
 ## 주요 구현
@@ -63,8 +63,12 @@ Hollow-CookOff-Codes/
 
 ### 4. 대화 시스템
 
-- 대화 내용을 JSON으로 관리하여 기획자가 코드 수정 없이 편집할 수 있습니다
+- 대화 내용을 ScriptableObject 에셋(`DialogueDB_Kor`, `DialogueDB_Eng`)으로 관리하여 기획자가 코드 수정 없이 편집할 수 있습니다
 - `ChatEventTrigger`로 씬 내 특정 위치나 조건에서 대화를 재생합니다
+
+## 기술 문서
+
+적 AI 확장 구조, 보스 체력 구간·슬래시 페이즈, 나이프·패리·갈고리 등 전투 시스템, 대화 시스템의 내부 설계는 [기술 문서](docs/TechnicalDesign.md)에 정리했습니다.
 
 ## 라이선스
 
