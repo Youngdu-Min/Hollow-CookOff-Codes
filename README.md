@@ -11,7 +11,7 @@ Developed as a team project — responsible for overall programming.
 
 [![Hollow: Cook Off Trailer](https://img.youtube.com/vi/cNTTR39F9BM/0.jpg)](https://www.youtube.com/watch?v=cNTTR39F9BM)
 
-[▶ Steam Page](https://store.steampowered.com/app/2640380/Hollow_Cook_Off/) · [▶ Feature Demo](https://www.youtube.com/watch?v=kKaZNlRhWig)
+[▶ Steam Page](https://store.steampowered.com/app/2640380/Hollow_Cook_Off/)
 
 | Item | Details |
 |------|------|
