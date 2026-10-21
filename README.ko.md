@@ -11,7 +11,7 @@ FSM 기반 AI와 핵심 전투 시스템을 설계·구현한 액션 사이드 �
 
 [![Hollow: Cook Off Trailer](https://img.youtube.com/vi/cNTTR39F9BM/0.jpg)](https://www.youtube.com/watch?v=cNTTR39F9BM)
 
-[▶ Steam 페이지](https://store.steampowered.com/app/2640380/Hollow_Cook_Off/) · [▶ 기능 시연 영상](https://www.youtube.com/watch?v=kKaZNlRhWig)
+[▶ Steam 페이지](https://store.steampowered.com/app/2640380/Hollow_Cook_Off/)
 
 | 항목 | 내용 |
 |------|------|
