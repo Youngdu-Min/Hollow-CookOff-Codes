@@ -7,7 +7,7 @@
 </div>
 
 FSM 기반 AI와 핵심 전투 시스템을 설계·구현한 액션 사이드 슈팅 게임  
-팀 프로젝트로 제작되었으며, 프로그래밍 전반을 담당했습니다.
+팀 프로젝트로 제작되었으며, 리드 프로그래머로서 프로그래밍 전반을 담당했습니다.
 
 [![Hollow: Cook Off Trailer](https://img.youtube.com/vi/cNTTR39F9BM/0.jpg)](https://www.youtube.com/watch?v=cNTTR39F9BM)
 
@@ -17,6 +17,7 @@ FSM 기반 AI와 핵심 전투 시스템을 설계·구현한 액션 사이드 �
 |------|------|
 | 장르 | 액션 사이드 슈팅 |
 | 엔진 | Unity (C#), Corgi Engine |
+| 역할 | 리드 프로그래머 |
 | 플랫폼 | PC (Steam) |
 | 출시 연도 | 2024 |
 

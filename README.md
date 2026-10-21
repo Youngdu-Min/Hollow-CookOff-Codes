@@ -7,7 +7,7 @@
 </div>
 
 An action side-scrolling shooter with FSM-based AI and core combat systems.  
-Developed as a team project — responsible for overall programming.
+Developed as a team project — as lead programmer, responsible for overall programming.
 
 [![Hollow: Cook Off Trailer](https://img.youtube.com/vi/cNTTR39F9BM/0.jpg)](https://www.youtube.com/watch?v=cNTTR39F9BM)
 
@@ -17,6 +17,7 @@ Developed as a team project — responsible for overall programming.
 |------|------|
 | Genre | Action Side-Scrolling Shooter |
 | Engine | Unity (C#), Corgi Engine |
+| Role | Lead Programmer |
 | Platform | PC (Steam) |
 | Release Year | 2024 |
 
