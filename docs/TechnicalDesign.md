@@ -44,6 +44,7 @@ classDiagram
     class Health
     class AIAction
     class AIDecision
+    class AIDecisionTimeInState
     class AIBrain
     class Weapon
     class DamageOnTouch
@@ -53,7 +54,8 @@ classDiagram
     AIBrain <|-- AIBrain_ArmorFind : 아머 지원 대상 탐색
     AIAction <|-- AIActionActiveOtherBrains : 패턴 뇌 교대
     AIAction <|-- AIActionPhaseEnable : 페이즈별 오브젝트
-    AIDecision <|-- AIDecisionTimeInState_ArmorHeal : 남은 시간 보존
+    AIDecision <|-- AIDecisionTimeInState
+    AIDecisionTimeInState <|-- AIDecisionTimeInState_ArmorHeal : 남은 시간 보존
     Weapon <|-- MeleeWeapon : 나이프 대시
     Weapon <|-- MeleeWeapon_AI
     MeleeWeapon_AI <|-- MultipleMeleeWeapon_AI : 잡기 연타
